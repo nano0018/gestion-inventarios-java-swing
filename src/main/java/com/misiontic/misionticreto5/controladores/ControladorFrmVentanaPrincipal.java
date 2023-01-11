@@ -143,7 +143,7 @@ public class ControladorFrmVentanaPrincipal implements ActionListener, MouseList
         if (validarRegistroProducto()) {
             double valorBaseDouble = 0;
             double temperaturaDouble = 0;
-            if ((ventana.getTxtValorBaseProducto().getText().isBlank()) && (ventana.getTxtTemperaturaProducto().getText().isBlank()) ) {            
+            if ((ventana.getTxtValorBaseProducto().getText().isEmpty()) && (ventana.getTxtTemperaturaProducto().getText().isEmpty()) ) {
                 valorBaseDouble = 0;
                 temperaturaDouble = 0;
             }
@@ -182,7 +182,7 @@ public class ControladorFrmVentanaPrincipal implements ActionListener, MouseList
             if (validarRegistroProducto()) {
                 double valorBaseDouble = 0;
                 double temperaturaDouble = 0;
-                if ((ventana.getTxtValorBaseProducto().getText().isBlank()) && (ventana.getTxtTemperaturaProducto().getText().isBlank()) ) {            
+                if ((ventana.getTxtValorBaseProducto().getText().isEmpty()) && (ventana.getTxtTemperaturaProducto().getText().isEmpty()) ) {
                     valorBaseDouble = 0;
                     temperaturaDouble = 0;
                 }
@@ -224,7 +224,7 @@ public class ControladorFrmVentanaPrincipal implements ActionListener, MouseList
             if (validarRegistroProducto()) {
                 double valorBaseDouble = 0;
                 double temperaturaDouble = 0;
-                if ((ventana.getTxtValorBaseProducto().getText().isBlank()) && (ventana.getTxtTemperaturaProducto().getText().isBlank()) ) {            
+                if ((ventana.getTxtValorBaseProducto().getText().isEmpty()) && (ventana.getTxtTemperaturaProducto().getText().isEmpty()) ) {
                     valorBaseDouble = 0;
                     temperaturaDouble = 0;
                 }
@@ -353,7 +353,7 @@ public class ControladorFrmVentanaPrincipal implements ActionListener, MouseList
         double valorBaseDouble = 0;
         double temperaturaDouble = 0;
         //System.out.println(ventana.getTxtValorBaseProducto().getText());
-        if ((ventana.getTxtValorBaseProducto().getText().isBlank()) && (ventana.getTxtTemperaturaProducto().getText().isBlank()) ) {            
+        if ((ventana.getTxtValorBaseProducto().getText().isEmpty()) && (ventana.getTxtTemperaturaProducto().getText().isEmpty()) ) {
             valorBaseDouble = 0;
             temperaturaDouble = 0;
         }
@@ -370,7 +370,7 @@ public class ControladorFrmVentanaPrincipal implements ActionListener, MouseList
     private void buscarProducto(String id) {
         double valorBaseDouble = 0;
         double temperaturaDouble = 0;
-        if ((ventana.getTxtValorBaseProducto().getText().isBlank()) && (ventana.getTxtTemperaturaProducto().getText().isBlank()) ) {            
+        if ((ventana.getTxtValorBaseProducto().getText().isEmpty()) && (ventana.getTxtTemperaturaProducto().getText().isEmpty()) ) {
             valorBaseDouble = 0;
             temperaturaDouble = 0;
         }
