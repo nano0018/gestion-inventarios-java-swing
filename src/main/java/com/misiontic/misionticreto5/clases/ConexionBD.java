@@ -3,29 +3,31 @@ package com.misiontic.misionticreto5.clases;
 
 import java.sql.*;
 import java.util.logging.*;
+import org.sqlite.JDBC;
 
 public class ConexionBD {
 // Configuracion de la conexion a la base de datos
-
-    private String url = "";
+    
+    // Se debe cambiar el url según la ubicación de la base de datos
+    private String url = "C:\\Reto5.db";
     public Connection con = null;
     private Statement stmt = null;
     private ResultSet rs = null;
 //Constructor sin parmetros
 
     public ConexionBD() {
-        url = "jdbc:sqlite:Reto5.db";
         try {
-// Realizar la conexion
-            con = DriverManager.getConnection(url);
-            if (con != null) {
-                DatabaseMetaData meta = con.getMetaData();
-                createBD();
-//                System.out.println("Base de datos conectada " + meta.getDriverName());
+                Class.forName("org.sqlite.JDBC");
+                con = DriverManager.getConnection("jdbc:sqlite:" + url);
+                if (con != null) {
+                    System.out.println("Conectado");
+                }
+            } catch (SQLException ex) {
+                System.err.println("No se ha podido conectar a la base de datos\n" + ex.getMessage());
+            } catch (ClassNotFoundException e) {
+                System.err.println("El JAR no está correctamente agregado\n"
+                  + e.getMessage());
             }
-        } catch (SQLException ex) {
-            System.out.println(ex.getMessage());
-        }
     }
 //Retornar la conexión
 
